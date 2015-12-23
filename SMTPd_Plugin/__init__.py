@@ -1,7 +1,7 @@
 eg.RegisterPlugin(
     name = "SMTPd",
-    author = "Chase Whitten (Techoguy) and Allen Derusha",
-    version = "0.0.1",
+    author = "Chase Witten and Allen Derusha",
+    version = "0.0.2",
     kind = "other",
     description = "Setup an SMTP daemon and trigger events when messages arrive.",
     icon = (
@@ -13,7 +13,8 @@ eg.RegisterPlugin(
         "9GGeCW/VX1XLCS7baU5CwIf5nzDtEq5evX8JuDHh+nkkdk+6WoUAdR+mVcKNu1RkAt6oF7Qee1Y5"
         "iyXxOwHG1GBCML14LAEtVC+6kiBjm9v1jmAcLpATTM0fqV/CSMIv8J1QQlsScBiwUeDte5D+BPMR"
         "6RwgYBdAO56ZpZoIT5+HenYS//vl3CeOUlJ5FnYb6QAAAABJRU5ErkJggg=="
-    )   
+    ),
+    url = "http://www.eventghost.org/forum/viewtopic.php?f=9&t=7833"
 )
 
 # TO DO:
@@ -37,7 +38,7 @@ class Text:
 class CustomSMTPServer(smtpd.SMTPServer):
     global smtpdPrefix
     def process_message(self, peer, mailfrom, rcpttos, data):
-        print 'SMTPd: Receiving message from:', peer
+        #print 'SMTPd: Receiving message from:', peer
         #print 'SMTPd: Message addressed from:', mailfrom
         #print 'SMTPd: Message addressed to  :', rcpttos
         #print 'SMTPd: Message length        :', len(data)
